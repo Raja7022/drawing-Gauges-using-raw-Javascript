@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Speedometer HTML5 Canvas</title>
+
+
+<script src="help.js"></script>
+
+
+</head>
+	<body>
+		<canvas id="tutorial1" width="220" height="110">
+			Canvas not available.
+		</canvas>
+		<div>
+			<form id="drawTemp">
+				<input type="text" id="txtSpeed1" name="txtSpeed" value="20" maxlength="3"/>
+				<input type="button" value="Draw" onclick=drawWithInputValue(document.getElementById('txtSpeed1'),document.getElementById('tutorial1'))>
+			</form>
+
+
+
+		</div>
+
+
+<canvas id="tutorial2" width="220" height="110">
+			Canvas not available.
+		</canvas>
+		<div>
+			<form id="drawTemp">
+				<input type="text" id="txtSpeed2" name="txtSpeed" value="20" maxlength="3"/>
+				<input type="button" value="Draw" onclick=drawWithInputValue(document.getElementById('txtSpeed2'),document.getElementById('tutorial2'))>
+			</form>
+
+
+
+		</div>
+
+
+
+<canvas id="tutorial3" width="220" height="110">
+			Canvas not available.
+		</canvas>
+		<div>
+			<form id="drawTemp">
+				<input type="text" id="txtSpeed3" name="txtSpeed" value="20" maxlength="3"/>
+				<input type="button" value="Draw" onclick=drawWithInputValue(document.getElementById('txtSpeed3'),document.getElementById('tutorial3'))>
+			</form>
+
+
+
+		</div>
+
+
+
+
+<script>
+    window.onload = function ()
+    {
+      drawWithInputValue(document.getElementById('txtSpeed1'),document.getElementById('tutorial1'));
+      drawWithInputValue(document.getElementById('txtSpeed2'),document.getElementById('tutorial2'));
+      drawWithInputValue(document.getElementById('txtSpeed3'),document.getElementById('tutorial3'));
+    };
+
+
+
+</script>
+
+	</body>
+</html>
