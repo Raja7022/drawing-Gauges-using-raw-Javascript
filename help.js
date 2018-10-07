@@ -61,7 +61,7 @@ function drawOuterMetallicArc(options) {
 	options.ctx.beginPath();
 
 	// Nice shade of grey
-	options.ctx.fillStyle = "#536DFE";
+	options.ctx.fillStyle = "#3F51B5";
 
 	// Draw the outer circle
 	options.ctx.arc(options.center.X,
@@ -118,7 +118,7 @@ function drawBackground(options) {
 	options.ctx.fillStyle = "#B2EBF2";
 
 	// Draw semi-transparent circles
-	for (i = 70; i < options.radius; i++) {
+	for (i = 70; i < options.radius-15; i++) {
 		options.ctx.beginPath();
 
 		options.ctx.arc(options.center.X,
@@ -137,10 +137,10 @@ function applyDefaultContextSettings(options) {
 	 * default settings
 	 */
 
-	options.ctx.lineWidth = 1;
+	options.ctx.lineWidth = 0.5;
 	options.ctx.globalAlpha = 0.5;
-	options.ctx.strokeStyle = "#212121";
-	options.ctx.fillStyle = '#212121';
+	options.ctx.strokeStyle = 'black';//"#212121";
+	options.ctx.fillStyle = 'black';//'#212121';
 }
 
 function drawSmallTickMarks(options) {
@@ -273,7 +273,7 @@ function drawTextMarkers(options) {
 	applyDefaultContextSettings(options);
 
 	// Font styling
-	options.ctx.font = 'bold 10px sans-serif';
+	options.ctx.font = ' bold 10px arial ';
 	options.ctx.textBaseline = 'top';
 
 	options.ctx.beginPath();
@@ -346,7 +346,7 @@ function drawSpeedometerColourArc(options) {
 	
 	drawSpeedometerPart(options, 0.9, "rgb(255, 0, 0)", startofRed,endOfRed);
 	drawSpeedometerPart(options, 0.9, "#FF9800",startofOrange, endOfOrange);
-	drawSpeedometerPart(options, 1.0, "#388E3C",startofGreen, endOfGreen);
+	drawSpeedometerPart(options, 1.0, "#8BC34A",startofGreen, endOfGreen);
 }
 
 function drawNeedleDial(options, alphaValue, strokeStyle, fillStyle) {
@@ -540,4 +540,3 @@ function drawWithInputValue(something,nothing) {
  
     }
 }
-
